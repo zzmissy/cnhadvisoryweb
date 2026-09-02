@@ -1,0 +1,20 @@
+# Local working copies and exports
+/index.html
+/styles.css
+/script.js
+/assets/
+/output/
+
+# Standalone previews, backups, and archives
+/CNH-Advisory-*.html
+*.zip
+*.bak
+*.backup
+*~
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
