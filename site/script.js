@@ -168,3 +168,92 @@ journeyTabs.forEach((tab, index) => {
     activateJourney(journeyTabs[nextIndex], true);
   });
 });
+
+const teamTabs = Array.from(document.querySelectorAll('.team-tabs [role="tab"]'));
+const teamPanels = Array.from(document.querySelectorAll('.team-panel[role="tabpanel"]'));
+
+function activateTeamTab(nextTab, moveFocus = false) {
+  teamTabs.forEach((tab) => {
+    const selected = tab === nextTab;
+    tab.setAttribute("aria-selected", String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+  });
+
+  teamPanels.forEach((panel) => {
+    const selected = panel.id === nextTab.getAttribute("aria-controls");
+    panel.hidden = !selected;
+    panel.classList.toggle("is-active", selected);
+  });
+
+  if (moveFocus) nextTab.focus();
+}
+
+teamTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => activateTeamTab(tab));
+  tab.addEventListener("keydown", (event) => {
+    let nextIndex = index;
+    if (event.key === "ArrowRight") nextIndex = (index + 1) % teamTabs.length;
+    else if (event.key === "ArrowLeft") nextIndex = (index - 1 + teamTabs.length) % teamTabs.length;
+    else if (event.key === "Home") nextIndex = 0;
+    else if (event.key === "End") nextIndex = teamTabs.length - 1;
+    else return;
+
+    event.preventDefault();
+    activateTeamTab(teamTabs[nextIndex], true);
+  });
+});
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+  const submitButton = contactForm.querySelector(".contact-submit");
+  const statusMessage = contactForm.querySelector(".contact-form-status");
+  const subjectField = contactForm.querySelector('input[name="_subject"]');
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.reportValidity()) return;
+
+    const name = contactForm.elements.name.value.trim();
+    const today = new Date();
+    const dateStamp = [
+      today.getFullYear(),
+      String(today.getMonth() + 1).padStart(2, "0"),
+      String(today.getDate()).padStart(2, "0")
+    ].join("-");
+
+    subjectField.value = `${name} + ${dateStamp} + inquiry`;
+    submitButton.disabled = true;
+    submitButton.setAttribute("aria-busy", "true");
+    statusMessage.className = "contact-form-status is-sending";
+    statusMessage.textContent = "Sending your inquiry…";
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(Object.fromEntries(formData.entries()))
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || result.success === false || result.success === "false") {
+        throw new Error(result.message || "Unable to send inquiry");
+      }
+
+      contactForm.reset();
+      statusMessage.className = "contact-form-status is-success";
+      statusMessage.textContent = "Thank you. Your inquiry has been sent.";
+    } catch (error) {
+      statusMessage.className = "contact-form-status is-error";
+      statusMessage.textContent = "We couldn’t send your inquiry. Please try again in a moment.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.removeAttribute("aria-busy");
+    }
+  });
+}

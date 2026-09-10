@@ -7,17 +7,17 @@
   <meta property="og:title" content="Expert tax planning. On demand." />
   <meta property="og:description" content="Fixed-fee support for professional advisors and their clients." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://cnhadvisory.com/assets/og.png" />
+  <meta property="og:image" content="https://bluekitetax.com/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Expert tax planning. On demand." />
   <meta name="twitter:description" content="Fixed-fee support for professional advisors and their clients." />
-  <meta name="twitter:image" content="https://cnhadvisory.com/assets/og.png" />
-  <link rel="icon" type="image/png" href="assets/cnh-mark.png" />
-  <title>CNH Tax Planning — Expert tax planning, on demand</title>
+  <meta name="twitter:image" content="https://bluekitetax.com/assets/og.png" />
+  <link rel="icon" type="image/png" href="assets/blue-kite-logo-light.png?v=20260908-1" />
+  <title>Blue Kite Tax + Advisory — Expert tax planning, on demand</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260902-59" />
+  <link rel="stylesheet" href="styles.css?v=20260910-77" />
 </head>
 <body>
   <header class="site-header">
@@ -31,14 +31,14 @@
     </div>
     <div class="menu-line">
       <div class="shell menu-line-inner">
-        <a class="brand" href="#top" aria-label="CNH Tax and Advisory home">
-          <img class="site-logo" src="assets/cnh-logo-revised.png" alt="CNH Tax + Advisory" />
+        <a class="brand" href="#top" aria-label="Blue Kite Tax + Advisory home">
+          <img class="site-logo" src="assets/blue-kite-logo-light.png?v=20260908-1" alt="Blue Kite Tax + Advisory" />
         </a>
         <nav aria-label="Main navigation">
           <a href="#how-it-works">How It Works</a>
           <a href="#who-we-help">Who We Help</a>
           <a href="#solutions">Planning Solutions</a>
-          <a href="#about">Our Team</a>
+          <a href="#about" hidden>Our Team</a>
         </nav>
         <button class="menu" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
       </div>
@@ -188,29 +188,43 @@
       </div>
     </section>
 
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div class="shell about-grid">
-        <header class="about-heading">
-          <h2 id="about-title">Experienced leadership.<br><em>A more direct model.</em></h2>
-          <p class="about-intro">We make specialized tax planning easier to access through experienced professionals who remain hands on from discovery through implementation. Clients work directly with the people shaping their strategy, ensuring continuity, clarity, and informed guidance at every stage.</p>
-        </header>
-        <figure class="founders-figure">
-          <img class="founders-image" src="assets/founder-photo.png" alt="CNH Advisory founders Kevin Park and Zoe Chu" loading="lazy" decoding="async" />
-          <figcaption class="founder-credits">
-            <details class="founder-profile">
-              <summary>
-                <span class="founder-identity"><strong>Kevin Park</strong><span>CPA, CA</span></span>
-                <span class="founder-toggle" aria-hidden="true">+</span>
-              </summary>
-              <div class="founder-bio"><div class="founder-bio-inner"><p>Kevin leads client and professional relationships at CNH, bringing a collaborative and practical approach to every engagement. He works closely with business owners, families, and their existing advisors to understand priorities, coordinate the planning process, and move complex matters forward with clarity.</p></div></div>
-            </details>
-            <details class="founder-profile">
-              <summary>
-                <span class="founder-identity"><strong>Zoe Chu</strong><span>CPA, TEP, CFP</span></span>
-                <span class="founder-toggle" aria-hidden="true">+</span>
-              </summary>
-              <div class="founder-bio"><div class="founder-bio-inner"><p>Zoe leads the technical development and internal delivery of CNH’s planning engagements. She brings structure and precision to complex tax matters, overseeing research, analysis, and implementation details so every strategy is thoughtfully designed, thoroughly documented, and ready to put into action.</p></div></div>
-            </details>
+    <section class="about" id="about" aria-labelledby="about-title" hidden>
+      <div class="shell team-layout">
+        <div class="team-copy">
+          <header class="team-heading">
+            <h2 id="about-title">Experienced leadership.<br><em>A more direct model.</em></h2>
+          </header>
+
+          <div class="team-tabs" role="tablist" aria-label="About Blue Kite">
+            <button id="story-tab" type="button" role="tab" aria-selected="true" aria-controls="story-panel">Our Story</button>
+            <button id="about-us-tab" type="button" role="tab" aria-selected="false" aria-controls="about-us-panel" tabindex="-1">About Us</button>
+          </div>
+
+          <div class="team-panel" id="story-panel" role="tabpanel" aria-labelledby="story-tab">
+            <p>Blue Kite was built on a simple belief: sophisticated tax planning should feel clear, personal, and practical. We pair deep technical judgment with a direct, collaborative model, helping clients understand the choices in front of them and move forward with confidence. Every engagement is shaped around the real circumstances behind the numbers—with focused advice, transparent scope, and thoughtful implementation.</p>
+          </div>
+
+          <div class="team-panel" id="about-us-panel" role="tabpanel" aria-labelledby="about-us-tab" hidden>
+            <div class="team-bios">
+              <article>
+                <h3>Kevin Park <span>CPA, CA</span></h3>
+                <p>Kevin leads client and professional relationships at Blue Kite, bringing a collaborative and practical approach to every engagement. He works closely with business owners, families, and their existing advisors to understand priorities, coordinate the planning process, and move complex matters forward with clarity.</p>
+              </article>
+              <article>
+                <h3>Zoe Chu <span>CPA, TEP, CFP</span></h3>
+                <p>Zoe leads the technical development and internal delivery of Blue Kite’s planning engagements. She brings structure and precision to complex tax matters, overseeing research, analysis, and implementation details so every strategy is thoughtfully designed, thoroughly documented, and ready to put into action.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <figure class="team-portrait">
+          <div class="team-portrait-stage">
+            <img class="team-photo" src="assets/founders-portrait-2026.jpg?v=20260908-1" alt="Blue Kite Tax + Advisory founders Zoe Chu and Kevin Park" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="team-founders">
+            <p><strong>Zoe Chu</strong><span>CPA, TEP, CFP</span></p>
+            <p><strong>Kevin Park</strong><span>CPA, CA</span></p>
           </figcaption>
         </figure>
       </div>
@@ -225,7 +239,14 @@
         </div>
 
         <div class="contact-panel">
-          <form class="contact-form" action="mailto:info@cnhadvisory.com" method="post" enctype="text/plain">
+          <form class="contact-form" action="https://formsubmit.co/ajax/hello@bluekitetax.com" method="post">
+            <input type="hidden" name="_subject" value="Website inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <label class="contact-honey" aria-hidden="true">
+              <span>Leave this field empty</span>
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            </label>
             <div class="contact-fields">
               <label>
                 <span>Name</span>
@@ -249,11 +270,12 @@
               </label>
             </div>
             <button class="contact-submit" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
+            <p class="contact-form-status" role="status" aria-live="polite"></p>
           </form>
 
           <div class="schedule-call">
             <p><strong>Prefer to skip the form?</strong> Schedule a call and we’ll help you find the right starting point.</p>
-            <a href="https://calendly.com/cnhadvisory" target="_blank" rel="noopener noreferrer">Schedule a Call <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"></path></svg></a>
+            <a href="https://calendly.com/cnhadvisory/30min" target="_blank" rel="noopener noreferrer">Schedule a Call <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"></path></svg></a>
           </div>
         </div>
       </div>
@@ -262,14 +284,21 @@
 
   <footer>
     <div class="shell footer-grid">
-      <div><a class="brand footer-brand" href="#top" aria-label="CNH Tax + Advisory home"><img class="footer-logo" src="assets/cnh-logo-revised.png" alt="CNH Tax + Advisory" /></a></div>
+      <div class="footer-identity">
+        <a class="brand footer-brand" href="#top" aria-label="Blue Kite Tax + Advisory home"><img class="footer-logo" src="assets/blue-kite-logo-light.png?v=20260908-1" alt="Blue Kite Tax + Advisory" /></a>
+      </div>
       <div><b>Explore</b><a href="#solutions">Planning Solutions</a><a href="#who-we-help">Who We Help</a><a href="#how-it-works">How It Works</a></div>
-      <div><b>Company</b><a href="#about">Our Team</a><a href="#contact">Contact</a></div>
+      <div><b>Company</b><a href="#about" hidden>Our Team</a><a href="#contact">Contact</a></div>
     </div>
+    <address class="shell footer-contact">
+      <span>Tel: 604-561-9141</span>
+      <span>Email: hello@bluekitetax.com</span>
+      <span>Serving all across Canada</span>
+    </address>
     <div class="shell disclaimer">The information on this website is general in nature and is not intended to constitute tax, legal, accounting, investment, or financial advice. Strategies must be evaluated in light of each client's circumstances and applicable legislation.</div>
-    <div class="shell legal"><span>© 2026 CNH Tax Planning. All rights reserved.</span><span>Privacy · Terms</span></div>
+    <div class="shell legal"><span>© 2026 bluekitetax.com. All rights reserved.</span><span>Privacy · Terms</span></div>
   </footer>
 
-  <script src="script.js?v=20260901-58"></script>
+  <script src="script.js?v=20260909-60"></script>
 </body>
 </html>
