@@ -3249,6 +3249,17 @@ footer {
   line-height: 1.5;
 }
 
+.footer-contact a {
+  color: inherit;
+  text-decoration-color: rgba(0, 9, 33, 0.35);
+  text-underline-offset: 3px;
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
 .footer-contact + .disclaimer {
   margin-top: 28px;
 }
