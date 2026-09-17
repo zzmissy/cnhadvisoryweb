@@ -1318,6 +1318,11 @@ html { scroll-padding-top: 140px; }
   letter-spacing: -.03em;
 }
 
+.social-linkedin:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 html { scroll-padding-top: 120px; }
 
 @media (min-width: 921px) {
