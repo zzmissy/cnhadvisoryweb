@@ -3327,8 +3327,8 @@ footer {
 
 .team-layout {
   display: grid;
-  grid-template-columns: minmax(0, .88fr) minmax(480px, 1.12fr);
-  gap: clamp(64px, 8vw, 118px);
+  grid-template-columns: minmax(0, .94fr) minmax(340px, .76fr);
+  gap: clamp(28px, 4vw, 54px);
   align-items: center;
 }
 
@@ -3433,10 +3433,10 @@ footer {
 }
 
 .team-portrait {
-  width: min(520px, 100%);
+  width: min(340px, 78%);
   min-width: 0;
   margin: 0;
-  justify-self: end;
+  justify-self: start;
 }
 
 .team-portrait-stage {
@@ -3460,17 +3460,13 @@ footer {
 
 .team-founders {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   padding: 18px clamp(18px, 3vw, 38px) 0;
 }
 
 .team-founders p {
   margin: 0;
-}
-
-.team-founders p:last-child {
-  text-align: right;
 }
 
 .team-founders strong,
@@ -3503,7 +3499,7 @@ footer {
 
   .team-layout {
     grid-template-columns: 1fr;
-    gap: 54px;
+    gap: 34px;
   }
 
   .team-panel {
@@ -3511,7 +3507,7 @@ footer {
   }
 
   .team-portrait {
-    width: min(520px, 100%);
+    width: min(330px, 78vw);
     margin-inline: auto;
     justify-self: center;
   }
@@ -3543,7 +3539,7 @@ footer {
   }
 
   .team-portrait-stage {
-    padding: 30px 0 10px;
+    padding: 18px 0 8px;
   }
 
   .team-photo {
