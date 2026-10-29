@@ -3650,3 +3650,9 @@ footer {
     margin-top: 36px;
   }
 }
+
+/* Space for professional credential logos beneath Zoe's bio. */
+.credential-logos {
+  min-height: 96px;
+  margin-top: 24px;
+}
