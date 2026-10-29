@@ -68,7 +68,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/glass-hero.webp" type="image/webp" />
-  <link rel="stylesheet" href="styles.css?v=20261005-83" />
+  <link rel="stylesheet" href="styles.css?v=20261029-2" />
 </head>
 <body>
   <header class="site-header">
@@ -108,7 +108,7 @@
 
       <aside class="hero-panel" aria-label="Our wealth planning promise">
         <p>Blue Kite Tax &amp; Advisory Inc. brings wealth, tax and estate planning together in one place. We develop your strategy, manage the details and carry your plan through to implementation, with personal attention and professional expertise at every stage.</p>
-        <div class="hero-actions" style="flex-wrap: wrap; gap: 12px">
+        <div class="hero-actions">
           <a class="button" href="https://meetings-na3.hubspot.com/zoe-chu" target="_blank" rel="noopener noreferrer">Book a Consultation <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"></path></svg></a>
           <a class="button" href="#how-it-works">Our Approach <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"></path></svg></a>
         </div>
@@ -117,7 +117,7 @@
     <section class="features" id="services" aria-labelledby="features-title">
       <div class="shell">
         <div class="features-heading">
-          <h2 id="features-title">Our <em>Services</em></h2>
+          <h2 id="features-title"><em>Our Services</em></h2>
           <p>Wealth, tax and estate planning, from strategy to implementation.</p>
         </div>
         <div class="feature-grid">
@@ -167,95 +167,169 @@
       </div>
     </section>
 
-    <section class="work-with-us" id="how-it-works" aria-labelledby="work-title">
-      <div class="shell">
-        <header class="work-intro">
-          <h2 id="work-title">How We <em>Work</em></h2>
+    <section class="solutions process-section" id="how-it-works" aria-labelledby="work-title">
+      <div class="shell solutions-layout">
+        <header class="solutions-intro">
+          <h2 id="work-title"><em>How We Work</em></h2>
           <p>Choose the path that best reflects how you are approaching the planning need. Each engagement stays focused, transparent, and easy to coordinate.</p>
         </header>
+        <div class="process-content">
+          <div class="audience-tabs" role="tablist" aria-label="Choose your audience">
+            <button id="advisors-tab" role="tab" type="button" aria-selected="true" aria-controls="advisors-panel" tabindex="0">Professional Partners</button>
+            <button id="clients-tab" role="tab" type="button" aria-selected="false" aria-controls="clients-panel" tabindex="-1">Individuals &amp; Families</button>
+          </div>
+          <div class="journey-panels">
+            <section class="journey-panel is-entering" id="advisors-panel" role="tabpanel" aria-labelledby="advisors-tab">
+              <p class="process-summary"><strong>Your relationship. Our expertise.</strong><br>Extend the planning support you offer your clients. We lead the planning and implementation, with your involvement tailored to the relationship.</p>
+              <ol class="solution-list process-flow" aria-label="Professional partner process">
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="advisors-step-1-trigger" type="button" aria-expanded="true" aria-controls="advisors-step-1-panel">
+                      <span class="solution-index">01</span><span class="solution-title">Introduction</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="advisors-step-1-panel" role="region" aria-labelledby="advisors-step-1-trigger" aria-hidden="false">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>A simple introduction starts the process. We arrange the initial conversation and establish how you would like to be involved.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="advisors-step-2-trigger" type="button" aria-expanded="false" aria-controls="advisors-step-2-panel">
+                      <span class="solution-index">02</span><span class="solution-title">Discovery</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="advisors-step-2-panel" role="region" aria-labelledby="advisors-step-2-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>We lead the discovery, gather information and identify planning opportunities. We confirm the scope, fees and deliverables before proceeding.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="advisors-step-3-trigger" type="button" aria-expanded="false" aria-controls="advisors-step-3-panel">
+                      <span class="solution-index">03</span><span class="solution-title">Strategy</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="advisors-step-3-panel" role="region" aria-labelledby="advisors-step-3-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>We develop the strategy and lead your client through the recommendations. You can participate in key discussions as we help your client make informed decisions.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="advisors-step-4-trigger" type="button" aria-expanded="false" aria-controls="advisors-step-4-panel">
+                      <span class="solution-index">04</span><span class="solution-title">Implementation</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="advisors-step-4-panel" role="region" aria-labelledby="advisors-step-4-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>We manage implementation and, with your client’s permission, keep you informed. We carry the agreed work through to completion.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="advisors-step-5-trigger" type="button" aria-expanded="false" aria-controls="advisors-step-5-panel">
+                      <span class="solution-index">05</span><span class="solution-title">Handover</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="advisors-step-5-panel" role="region" aria-labelledby="advisors-step-5-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>Once the engagement is complete, we return the ongoing client relationship to you, with a clear summary and supporting documentation. We remain available whenever further planning support is needed.</p>
+                    </div></div>
+                  </div>
+                </li>
+              </ol>
+              <a class="journey-cta" href="https://meetings-na3.hubspot.com/zoe-chu" target="_blank" rel="noopener noreferrer">Discuss a Client Matter <span aria-hidden="true">→</span></a>
+            </section>
 
-        <div class="audience-tabs" role="tablist" aria-label="Choose your audience">
-          <button id="advisors-tab" role="tab" type="button" aria-selected="true" aria-controls="advisors-panel" tabindex="0">Professional Partners</button>
-          <button id="clients-tab" role="tab" type="button" aria-selected="false" aria-controls="clients-panel" tabindex="-1">Individuals &amp; Families</button>
-        </div>
-
-        <div class="journey-panels">
-          <section class="journey-panel is-entering" id="advisors-panel" role="tabpanel" aria-labelledby="advisors-tab">
-            <p><strong>Your relationship. Our expertise.</strong><br>Extend the planning support you offer your clients. We lead the planning and implementation, with your involvement tailored to the relationship.</p>
-            <ol class="journey-steps">
-              <li><span>01</span><h3>Introduction</h3><p>A simple introduction starts the process. We arrange the initial conversation and establish how you would like to be involved.</p></li>
-              <li><span>02</span><h3>Discovery</h3><p>We lead the discovery, gather information and identify planning opportunities. We confirm the scope, fees and deliverables before proceeding.</p></li>
-              <li><span>03</span><h3>Strategy</h3><p>We develop the strategy and lead your client through the recommendations. You can participate in key discussions as we help your client make informed decisions.</p></li>
-              <li><span>04</span><h3>Implementation</h3><p>We manage implementation and, with your client’s permission, keep you informed. We carry the agreed work through to completion.</p></li>
-              <li style="--journey-step: 4"><span>05</span><h3>Handover</h3><p>Once the engagement is complete, we return the ongoing client relationship to you, with a clear summary and supporting documentation. We remain available whenever further planning support is needed.</p></li>
-            </ol>
-            <a class="journey-cta" href="https://meetings-na3.hubspot.com/zoe-chu" target="_blank" rel="noopener noreferrer">Discuss a Client Matter <span aria-hidden="true">→</span></a>
-          </section>
-
-          <section class="journey-panel" id="clients-panel" role="tabpanel" aria-labelledby="clients-tab" hidden>
-            <p><strong>Personal guidance. Practical action.</strong><br>Work directly with us to bring your wealth, tax and estate priorities into one coordinated plan.</p>
-            <ol class="journey-steps">
-              <li><span>01</span><h3>Discovery</h3><p>Tell us about your circumstances, priorities and the decisions ahead. We establish where our expertise can make a difference.</p></li>
-              <li><span>02</span><h3>Proposal</h3><p>We assess your needs and propose a tailored engagement. You receive a clear scope, fee and outline of deliverables.</p></li>
-              <li><span>03</span><h3>Strategy</h3><p>We present your strategy and explain the choices and implications. Together, we establish the actions that fit your goals.</p></li>
-              <li><span>04</span><h3>Implementation</h3><p>We carry your approved strategy through to implementation. We confirm what has been completed and identify any future review needs.</p></li>
-              <li style="--journey-step: 4"><span>05</span><h3>Review</h3><p>We revisit your plan as your circumstances and priorities evolve. Together, we assess progress, reflect on what has changed and refine the strategy where needed.</p></li>
-            </ol>
-            <a class="journey-cta" href="#contact">Book a Consultation <span aria-hidden="true">→</span></a>
-          </section>
+            <section class="journey-panel" id="clients-panel" role="tabpanel" aria-labelledby="clients-tab" hidden>
+              <p class="process-summary"><strong>Personal guidance. Practical action.</strong><br>Work directly with us to bring your wealth, tax and estate priorities into one coordinated plan.</p>
+              <ol class="solution-list process-flow" aria-label="Client process">
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="clients-step-1-trigger" type="button" aria-expanded="true" aria-controls="clients-step-1-panel">
+                      <span class="solution-index">01</span><span class="solution-title">Discovery</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="clients-step-1-panel" role="region" aria-labelledby="clients-step-1-trigger" aria-hidden="false">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>Tell us about your circumstances, priorities and the decisions ahead. We establish where our expertise can make a difference.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="clients-step-2-trigger" type="button" aria-expanded="false" aria-controls="clients-step-2-panel">
+                      <span class="solution-index">02</span><span class="solution-title">Proposal</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="clients-step-2-panel" role="region" aria-labelledby="clients-step-2-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>We assess your needs and propose a tailored engagement. You receive a clear scope, fee and outline of deliverables.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="clients-step-3-trigger" type="button" aria-expanded="false" aria-controls="clients-step-3-panel">
+                      <span class="solution-index">03</span><span class="solution-title">Strategy</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="clients-step-3-panel" role="region" aria-labelledby="clients-step-3-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>We present your strategy and explain the choices and implications. Together, we establish the actions that fit your goals.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="clients-step-4-trigger" type="button" aria-expanded="false" aria-controls="clients-step-4-panel">
+                      <span class="solution-index">04</span><span class="solution-title">Implementation</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="clients-step-4-panel" role="region" aria-labelledby="clients-step-4-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>We carry your approved strategy through to implementation. We confirm what has been completed and identify any future review needs.</p>
+                    </div></div>
+                  </div>
+                </li>
+                <li class="solution-item">
+                  <h3 class="process-step-title">
+                    <button class="solution-trigger" id="clients-step-5-trigger" type="button" aria-expanded="false" aria-controls="clients-step-5-panel">
+                      <span class="solution-index">05</span><span class="solution-title">Review</span><i aria-hidden="true">+</i>
+                    </button>
+                  </h3>
+                  <div class="solution-reveal" id="clients-step-5-panel" role="region" aria-labelledby="clients-step-5-trigger" aria-hidden="true">
+                    <div class="solution-reveal-inner"><div class="solution-detail">
+                      <p>We revisit your plan as your circumstances and priorities evolve. Together, we assess progress, reflect on what has changed and refine the strategy where needed.</p>
+                    </div></div>
+                  </div>
+                </li>
+              </ol>
+              <a class="journey-cta" href="#contact">Book a Consultation <span aria-hidden="true">→</span></a>
+            </section>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="solutions" id="who-we-help">
-      <div class="shell solutions-layout">
-        <div class="solutions-intro">
-          <h2>Who We <em>Help</em></h2>
+    <section class="work-with-us audience-section" id="who-we-help" aria-labelledby="audience-title">
+      <div class="shell">
+        <header class="work-intro">
+          <h2 id="audience-title">Who We <em>Help</em></h2>
           <p>Wealth, tax and estate planning for professional partners, business owners, professionals and families.</p>
-          <a class="button button-light" href="#contact">Book a Consultation <span>→</span></a>
-        </div>
-        <div class="solution-list">
-          <article class="solution-item">
-            <button class="solution-trigger" id="solution-trigger-1" type="button" aria-expanded="true" aria-controls="solution-panel-1">
-              <span class="solution-index">01</span><span class="solution-title">Professional Partners</span><i aria-hidden="true">+</i>
-            </button>
-            <div class="solution-reveal" id="solution-panel-1" role="region" aria-labelledby="solution-trigger-1" aria-hidden="false">
-              <div class="solution-reveal-inner"><div class="solution-detail">
-                <p>Accountants, advisors and lawyers seeking planning and implementation support for their clients.</p>
-              </div></div>
-            </div>
-          </article>
-          <article class="solution-item">
-            <button class="solution-trigger" id="solution-trigger-2" type="button" aria-expanded="false" aria-controls="solution-panel-2">
-              <span class="solution-index">02</span><span class="solution-title">Business Owners</span><i aria-hidden="true">+</i>
-            </button>
-            <div class="solution-reveal" id="solution-panel-2" role="region" aria-labelledby="solution-trigger-2" aria-hidden="true">
-              <div class="solution-reveal-inner"><div class="solution-detail">
-                <p>Owners connecting their business wealth with personal goals, succession and a future exit.</p>
-              </div></div>
-            </div>
-          </article>
-          <article class="solution-item">
-            <button class="solution-trigger" id="solution-trigger-3" type="button" aria-expanded="false" aria-controls="solution-panel-3">
-              <span class="solution-index">03</span><span class="solution-title">Professionals &amp; Executives</span><i aria-hidden="true">+</i>
-            </button>
-            <div class="solution-reveal" id="solution-panel-3" role="region" aria-labelledby="solution-trigger-3" aria-hidden="true">
-              <div class="solution-reveal-inner"><div class="solution-detail">
-                <p>Individuals navigating substantial income, corporate assets and equity compensation.</p>
-              </div></div>
-            </div>
-          </article>
-          <article class="solution-item">
-            <button class="solution-trigger" id="solution-trigger-4" type="button" aria-expanded="false" aria-controls="solution-panel-4">
-              <span class="solution-index">04</span><span class="solution-title">Individuals &amp; Families</span><i aria-hidden="true">+</i>
-            </button>
-            <div class="solution-reveal" id="solution-panel-4" role="region" aria-labelledby="solution-trigger-4" aria-hidden="true">
-              <div class="solution-reveal-inner"><div class="solution-detail">
-                <p>Families planning around significant assets, wealth transfers and the next generation.</p>
-              </div></div>
-            </div>
-          </article>
-        </div>
+        </header>
+        <ul class="journey-steps audience-cards">
+          <li><span aria-hidden="true">01</span><h3>Professional Partners</h3><p>Accountants, advisors and lawyers seeking planning and implementation support for their clients.</p></li>
+          <li><span aria-hidden="true">02</span><h3>Business Owners</h3><p>Owners connecting their business wealth with personal goals, succession and a future exit.</p></li>
+          <li><span aria-hidden="true">03</span><h3>Professionals &amp; Executives</h3><p>Individuals navigating substantial income, corporate assets and equity compensation.</p></li>
+          <li><span aria-hidden="true">04</span><h3>Individuals &amp; Families</h3><p>Families planning around significant assets, wealth transfers and the next generation.</p></li>
+        </ul>
+        <a class="journey-cta" href="#contact">Book a Consultation <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -365,6 +439,6 @@
     <div class="shell legal"><span>© 2026 bluekitetax.com. All rights reserved.</span><span>Privacy · Terms</span></div>
   </footer>
 
-  <script src="script.js?v=20261029-1"></script>
+  <script src="script.js?v=20261029-2"></script>
 </body>
 </html>

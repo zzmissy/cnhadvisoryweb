@@ -94,7 +94,10 @@ function setSolutionState(trigger, expanded) {
 solutionTriggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {
     const willExpand = trigger.getAttribute("aria-expanded") !== "true";
-    solutionTriggers.forEach((other) => setSolutionState(other, other === trigger && willExpand));
+    const group = trigger.closest(".solution-list");
+    group?.querySelectorAll(".solution-trigger").forEach((other) => {
+      setSolutionState(other, other === trigger && willExpand);
+    });
   });
 });
 

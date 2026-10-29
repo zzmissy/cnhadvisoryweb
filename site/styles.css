@@ -3561,3 +3561,92 @@ footer {
     animation: none;
   }
 }
+
+/* Requested hero sizing and reusable process/audience layouts */
+.hero-copy {
+  min-width: 0;
+  container-type: inline-size;
+}
+
+.hero h1 {
+  max-width: 100%;
+  font-size: clamp(28px, 4.4vw, 64px);
+  font-size: clamp(28px, 8.9cqw, 64px);
+  line-height: 1.08;
+}
+
+.hero h1 > span,
+#rotating-phrase {
+  white-space: normal;
+}
+
+.hero-panel .hero-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: min(100%, 250px);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.hero-panel .hero-actions .button {
+  width: 100%;
+  min-width: 0;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.hero-actions .link-arrow {
+  flex-shrink: 0;
+}
+
+.process-content {
+  min-width: 0;
+}
+
+.process-content .audience-tabs {
+  max-width: 100%;
+  margin: 0 auto 32px;
+}
+
+.process-content .audience-tabs button {
+  min-width: 0;
+}
+
+.process-summary {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.process-summary strong {
+  color: var(--ink);
+}
+
+.process-flow {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process-step-title {
+  margin: 0;
+}
+
+.audience-cards {
+  margin-top: 48px;
+}
+
+#audience-title em {
+  color: var(--ink);
+}
+
+@media (max-width: 620px) {
+  .hero-panel .hero-actions {
+    width: 100%;
+  }
+
+  .audience-cards {
+    margin-top: 36px;
+  }
+}
