@@ -1,8 +1,7 @@
 const phrases = [
-  "On demand",
-  "Fixed fee",
-  "Clarity by design",
-  "Effortless to engage"
+  "Now within reach.",
+  "Built around you.",
+  "Across generations."
 ];
 
 const phrase = document.querySelector("#rotating-phrase");
