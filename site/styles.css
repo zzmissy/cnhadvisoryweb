@@ -3572,7 +3572,7 @@ footer {
   max-width: 100%;
   font-size: clamp(28px, 4.4vw, 64px);
   font-size: clamp(28px, 8.9cqw, 64px);
-  line-height: 1.08;
+  line-height: 1.3;
 }
 
 .hero h1 > span,
@@ -3655,4 +3655,26 @@ footer {
 .credential-logos {
   min-height: 96px;
   margin-top: 24px;
+}
+
+/* Give both headline rows room for full glyphs and widen desktop copy. */
+.hero h1 > span {
+  min-height: 1.46em;
+  padding-block: .08em;
+}
+
+.hero #rotating-phrase {
+  display: block;
+}
+
+.hero-panel {
+  min-width: 0;
+}
+
+@media (min-width: 1121px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 520px;
+    column-gap: clamp(40px, 4vw, 64px);
+    padding-inline: max(32px, calc((100vw - 1360px) / 2));
+  }
 }
