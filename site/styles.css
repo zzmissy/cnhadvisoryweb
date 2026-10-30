@@ -3307,7 +3307,7 @@ footer {
   color: var(--ink);
 }
 
-/* Our Team — editorial story/bio layout over the supplied glass artwork */
+/* About Zoe: personal introduction and portrait in the existing site style. */
 .about {
   background-color: var(--paper);
   background-image:
@@ -3325,15 +3325,17 @@ footer {
   background-size: 100% 100%, auto 145%;
 }
 
+
 .team-layout {
   display: grid;
-  grid-template-columns: minmax(0, .94fr) minmax(340px, .76fr);
-  gap: clamp(28px, 4vw, 54px);
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap: clamp(48px, 7vw, 104px);
   align-items: center;
 }
 
 .team-copy {
   min-width: 0;
+  max-width: 620px;
 }
 
 .team-heading h2 {
@@ -3341,102 +3343,37 @@ footer {
   color: var(--ink);
   font-size: clamp(48px, 5vw, 68px);
   font-weight: 300;
-  line-height: 1.02;
+  line-height: 1.08;
   letter-spacing: -.045em;
 }
 
 .team-heading h2 em {
   color: var(--blue);
   font-style: italic;
-  font-weight: 300;
+  font-weight: inherit;
 }
 
-.team-tabs {
-  display: inline-flex;
-  gap: 4px;
-  margin: 38px 0 30px;
-  padding: 5px;
-  background: rgba(237, 243, 255, .9);
-  border: 1px solid rgba(13, 82, 255, .1);
-  border-radius: 999px;
-}
-
-.team-tabs button {
-  min-width: 108px;
-  min-height: 40px;
-  padding: 8px 18px;
-  color: var(--muted);
-  background: transparent;
-  border: 0;
-  border-radius: 999px;
-  font: inherit;
-  font-size: 14px;
-  cursor: pointer;
-  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
-}
-
-.team-tabs button[aria-selected="true"] {
-  color: var(--white);
-  background: var(--blue);
-  box-shadow: 0 8px 20px rgba(13, 82, 255, .2);
-}
-
-.team-tabs button:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
-}
-
-.team-panel {
-  max-width: 620px;
-  color: var(--muted);
-  animation: team-panel-in .34s ease both;
-}
-
-.team-panel[hidden] {
-  display: none;
-}
-
-.team-panel > p {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.72;
-}
-
-.team-bios {
-  display: grid;
-  gap: 24px;
-}
-
-.team-bios article + article {
-  padding-top: 24px;
-  border-top: 1px solid rgba(0, 9, 33, .11);
-}
-
-.team-bios h3 {
-  margin: 0 0 8px;
+.team-designations {
+  display: block;
+  margin-top: 16px;
   color: var(--ink);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.team-bios h3 span {
-  margin-left: 7px;
-  color: var(--blue);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.team-bios p {
-  margin: 0;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+
+.team-introduction {
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
 }
 
 .team-portrait {
-  width: min(340px, 78%);
+  width: min(100%, 440px);
   min-width: 0;
   margin: 0;
-  justify-self: start;
+  justify-self: end;
 }
 
 .team-portrait-stage {
@@ -3446,8 +3383,6 @@ footer {
 }
 
 .team-photo {
-  position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -3458,57 +3393,23 @@ footer {
   box-shadow: 0 24px 58px rgba(0, 9, 33, .13);
 }
 
-.team-founders {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  padding: 18px clamp(18px, 3vw, 38px) 0;
-}
-
-.team-founders p {
-  margin: 0;
-}
-
-.team-founders strong,
-.team-founders span {
-  display: block;
-}
-
-.team-founders strong {
-  color: var(--ink);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.team-founders span {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-@keyframes team-panel-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 1050px) {
+@media (max-width: 900px) {
   .about {
     background-position: center, 60% 50%;
     background-size: 100% 100%, auto 128%;
   }
 
   .team-layout {
-    grid-template-columns: 1fr;
-    gap: 34px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
   }
 
-  .team-panel {
-    max-width: 760px;
+  .team-copy {
+    max-width: 680px;
   }
 
   .team-portrait {
-    width: min(330px, 78vw);
-    margin-inline: auto;
+    width: min(100%, 380px);
     justify-self: center;
   }
 }
@@ -3520,45 +3421,22 @@ footer {
   }
 
   .team-heading h2 {
-    font-size: clamp(40px, 11vw, 50px);
+    font-size: clamp(42px, 11vw, 50px);
   }
 
-  .team-tabs {
-    width: 100%;
-    margin: 30px 0 24px;
+  .team-designations {
+    margin-top: 12px;
+    font-size: 14px;
   }
 
-  .team-tabs button {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .team-panel > p,
-  .team-bios p {
+  .team-introduction {
+    margin-top: 24px;
     font-size: 16px;
-  }
-
-  .team-portrait-stage {
-    padding: 18px 0 8px;
+    line-height: 1.75;
   }
 
   .team-photo {
     border-radius: 24px;
-  }
-
-  .team-founders {
-    gap: 14px;
-    padding-inline: 0;
-  }
-
-  .team-founders strong {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .team-panel {
-    animation: none;
   }
 }
 
@@ -3649,12 +3527,6 @@ footer {
   .audience-cards {
     margin-top: 36px;
   }
-}
-
-/* Space for professional credential logos beneath Zoe's bio. */
-.credential-logos {
-  min-height: 96px;
-  margin-top: 24px;
 }
 
 /* How We Work: smaller stable photo, wider copy and centered audience tabs. */

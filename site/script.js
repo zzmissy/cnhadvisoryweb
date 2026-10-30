@@ -171,40 +171,6 @@ journeyTabs.forEach((tab, index) => {
   });
 });
 
-const teamTabs = Array.from(document.querySelectorAll('.team-tabs [role="tab"]'));
-const teamPanels = Array.from(document.querySelectorAll('.team-panel[role="tabpanel"]'));
-
-function activateTeamTab(nextTab, moveFocus = false) {
-  teamTabs.forEach((tab) => {
-    const selected = tab === nextTab;
-    tab.setAttribute("aria-selected", String(selected));
-    tab.tabIndex = selected ? 0 : -1;
-  });
-
-  teamPanels.forEach((panel) => {
-    const selected = panel.id === nextTab.getAttribute("aria-controls");
-    panel.hidden = !selected;
-    panel.classList.toggle("is-active", selected);
-  });
-
-  if (moveFocus) nextTab.focus();
-}
-
-teamTabs.forEach((tab, index) => {
-  tab.addEventListener("click", () => activateTeamTab(tab));
-  tab.addEventListener("keydown", (event) => {
-    let nextIndex = index;
-    if (event.key === "ArrowRight") nextIndex = (index + 1) % teamTabs.length;
-    else if (event.key === "ArrowLeft") nextIndex = (index - 1 + teamTabs.length) % teamTabs.length;
-    else if (event.key === "Home") nextIndex = 0;
-    else if (event.key === "End") nextIndex = teamTabs.length - 1;
-    else return;
-
-    event.preventDefault();
-    activateTeamTab(teamTabs[nextIndex], true);
-  });
-});
-
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
