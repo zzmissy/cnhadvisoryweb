@@ -3657,14 +3657,17 @@ footer {
   margin-top: 24px;
 }
 
-/* How We Work: stable photo frame, independent copy and generous spacing. */
+/* How We Work: smaller stable photo, wider copy and centered audience tabs. */
 .process-section .solutions-layout {
-  grid-template-columns: minmax(0, calc((100% - clamp(32px, 5vw, 72px)) * .6)) minmax(0, 1fr);
+  --process-gap: clamp(48px, 6vw, 104px);
+  --process-original-photo: calc((100% - clamp(32px, 5vw, 72px)) * .6);
+  --process-copy-width: calc((100% - var(--process-original-photo) - var(--process-gap)) * 1.1);
+  grid-template-columns: minmax(0, 1fr) minmax(0, var(--process-copy-width));
   grid-template-areas:
     ". heading"
     ". tabs"
     "visual content";
-  gap: 0 clamp(48px, 6vw, 104px);
+  gap: 0 var(--process-gap);
   align-items: start;
 }
 
@@ -3683,11 +3686,15 @@ footer {
   grid-area: tabs;
   max-width: 100%;
   margin: 0 0 32px;
-  justify-self: end;
+  justify-self: center;
 }
 
 .process-section .audience-tabs button {
   min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding-inline: clamp(14px, 2vw, 28px);
 }
 
