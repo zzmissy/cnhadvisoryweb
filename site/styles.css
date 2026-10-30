@@ -2675,9 +2675,10 @@ footer {
 .hero {
   width: 100%;
   max-width: none;
-  min-height: 640px;
+  /* Reduce both 126px desktop insets by 20%, including the minimum frame. */
+  min-height: 589.6px;
   margin: 0;
-  padding: clamp(84px, 9vw, 126px) max(32px, calc((100vw - 1240px) / 2));
+  padding: clamp(67.2px, 7.2vw, 100.8px) max(32px, calc((100vw - 1240px) / 2));
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(249, 249, 249, .98) 0%, rgba(249, 249, 249, .9) 48%, rgba(249, 249, 249, .6) 100%),
@@ -2839,7 +2840,8 @@ footer {
 
 @media (max-width: 1120px) {
   .hero {
-    padding: 80px max(32px, calc((100vw - 960px) / 2));
+    min-height: auto;
+    padding: 64px max(32px, calc((100vw - 960px) / 2));
     background-position: 62% center;
   }
 
@@ -2850,7 +2852,7 @@ footer {
 
 @media (max-width: 920px) {
   .hero {
-    padding: 72px 48px;
+    padding: 57.6px 48px;
     background:
       linear-gradient(90deg, rgba(249, 249, 249, .98), rgba(249, 249, 249, .8)),
       url("assets/glass-hero.webp") 66% center / cover no-repeat;
@@ -2868,7 +2870,7 @@ footer {
   .hero {
     width: 100%;
     margin: 0;
-    padding: 64px 24px 52px;
+    padding: 51.2px 24px 41.6px;
     background:
       linear-gradient(110deg, rgba(249, 249, 249, .98), rgba(249, 249, 249, .78)),
       url("assets/glass-hero.webp") 70% center / cover no-repeat;
@@ -3119,7 +3121,7 @@ footer {
   margin-top: 0;
   color: var(--ink);
   background:
-    linear-gradient(to bottom, var(--paper) 0%, rgba(249, 249, 249, .82) 18%, rgba(249, 249, 249, .22) 58%, rgba(13, 82, 255, .1) 100%),
+    linear-gradient(to bottom, var(--paper) 0%, var(--paper) 65%, rgba(249, 249, 249, .82) 76%, rgba(249, 249, 249, .22) 90%, rgba(13, 82, 255, .1) 100%),
     url("assets/glass-footer.webp") center / cover no-repeat;
 }
 
@@ -3246,10 +3248,10 @@ footer {
 
 .footer-contact {
   display: grid;
-  gap: 7px;
-  margin: 42px auto 0;
+  gap: 10px;
+  margin: 0;
   color: var(--ink);
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   line-height: 1.5;
 }
@@ -3263,10 +3265,6 @@ footer {
 .footer-contact a:hover,
 .footer-contact a:focus-visible {
   text-decoration-color: currentColor;
-}
-
-.footer-contact + .disclaimer {
-  margin-top: 28px;
 }
 
 .site-logo,
@@ -3314,91 +3312,191 @@ footer {
     linear-gradient(
       to bottom,
       var(--paper) 0%,
-      rgba(249, 249, 249, .78) 14%,
-      rgba(249, 249, 249, .38) 48%,
-      rgba(249, 249, 249, .76) 86%,
+      #fff 14%,
+      #fff 90%,
       var(--paper) 100%
-    ),
-    url("assets/team-glass-background-v2.webp");
-  background-position: center, 54% 48%;
+    );
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%, auto 145%;
+  background-size: 100% 100%;
 }
 
 
 .team-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
-  gap: clamp(48px, 7vw, 104px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) clamp(320px, 24vw, 400px);
+  gap: clamp(48px, 5vw, 88px);
+  align-items: start;
 }
 
 .team-copy {
   min-width: 0;
-  max-width: 620px;
+  max-width: none;
 }
 
-.team-heading h2 {
+.about-section-heading {
+  margin-bottom: 48px;
+}
+
+.about-section-heading h2 {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(48px, 5vw, 68px);
+  font-size: clamp(42px, 4vw, 50px);
+  font-style: italic;
   font-weight: 300;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -.045em;
 }
 
-.team-heading h2 em {
-  color: var(--blue);
-  font-style: italic;
-  font-weight: inherit;
+.team-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(24px, 2.2vw, 30px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -.025em;
 }
 
 .team-designations {
-  display: block;
-  margin-top: 16px;
+  display: inline-block;
+  margin: 0 0 0 12px;
   color: var(--ink);
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   letter-spacing: .08em;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.team-designations sup {
+  font-size: .65em;
+  line-height: 0;
 }
 
 .team-introduction {
+  max-width: none;
   margin: 30px 0 0;
   color: var(--muted);
   font-size: 17px;
   line-height: 1.8;
 }
 
-.team-portrait {
-  width: min(100%, 440px);
+.team-introduction + .team-introduction {
+  margin-top: 18px;
+}
+
+/* Original certification artwork on a clean white section, without a boxed panel.
+   Marks wrap on narrow screens instead of shrinking below approved sizes. */
+.team-credential-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  align-items: stretch;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  background: transparent;
+}
+
+.team-credential-logos li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 160px;
+  min-height: 128px;
+  padding: 32px;
+  place-items: center;
+}
+
+.team-credential-logos a {
+  display: block;
+  width: 100%;
   min-width: 0;
+  max-width: 100%;
+}
+
+.team-credential-logos img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  border: 0;
+}
+
+.team-credential-logos li:first-child {
+  /* The original CPA canvas also supplies white-space around the artwork. */
+  padding: 16px;
+}
+
+.team-credential-logos .credential-cpa {
+  width: 220px;
+}
+
+.team-credential-logos .credential-step {
+  width: 140px;
+}
+
+.team-credential-logos .credential-cfp {
+  width: 132px;
+}
+
+.credential-trademark-notice {
+  margin: 12px 0 0;
+  font: inherit;
+}
+
+.team-introduction:first-of-type::first-letter {
+  float: left;
+  margin: .08em .16em 0 0;
+  color: var(--ink);
+  font-size: 4.5em;
+  font-weight: 300;
+  line-height: .8;
+}
+
+@supports (initial-letter: 2) {
+  .team-introduction:first-of-type::first-letter {
+    float: none;
+    initial-letter: 2;
+    margin: 0 .2em 0 0;
+    font-size: 1em;
+    line-height: inherit;
+  }
+}
+
+.team-portrait {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
   margin: 0;
+  align-self: start;
   justify-self: end;
 }
 
 .team-portrait-stage {
   position: relative;
   isolation: isolate;
+  min-height: 0;
   padding: 0;
 }
 
 .team-photo {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: 50% 42%;
-  border: 1px solid rgba(255, 255, 255, .92);
-  border-radius: 32px;
-  box-shadow: 0 24px 58px rgba(0, 9, 33, .13);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: left top;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-@media (max-width: 900px) {
-  .about {
-    background-position: center, 60% 50%;
-    background-size: 100% 100%, auto 128%;
-  }
-
+@media (max-width: 1050px) {
   .team-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 40px;
@@ -3409,23 +3507,21 @@ footer {
   }
 
   .team-portrait {
-    width: min(100%, 380px);
+    width: min(100%, 340px);
     justify-self: center;
   }
 }
 
 @media (max-width: 620px) {
-  .about {
-    background-position: center, 64% 50%;
-    background-size: 100% 100%, auto 116%;
+  .team-credential-logos img {
+    margin-inline: 0;
   }
 
-  .team-heading h2 {
-    font-size: clamp(42px, 11vw, 50px);
+  .about-section-heading {
+    margin-bottom: 32px;
   }
 
   .team-designations {
-    margin-top: 12px;
     font-size: 14px;
   }
 
@@ -3435,9 +3531,6 @@ footer {
     line-height: 1.75;
   }
 
-  .team-photo {
-    border-radius: 24px;
-  }
 }
 
 /* Requested hero sizing and reusable process/audience layouts */
@@ -3462,6 +3555,7 @@ footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   width: min(100%, 250px);
+  margin-top: 44px;
   gap: 12px;
   align-items: stretch;
 }
@@ -3529,7 +3623,7 @@ footer {
   }
 }
 
-/* How We Work: smaller stable photo, wider copy and centered audience tabs. */
+/* How We Work: tabs belong to the copy column, aligned with the photo's top. */
 .process-section .solutions-layout {
   --process-gap: clamp(48px, 6vw, 104px);
   --process-original-photo: calc((100% - clamp(32px, 5vw, 72px)) * .6);
@@ -3537,7 +3631,6 @@ footer {
   grid-template-columns: minmax(0, 1fr) minmax(0, var(--process-copy-width));
   grid-template-areas:
     ". heading"
-    ". tabs"
     "visual content";
   gap: 0 var(--process-gap);
   align-items: start;
@@ -3555,10 +3648,8 @@ footer {
 }
 
 .process-section .audience-tabs {
-  grid-area: tabs;
   max-width: 100%;
-  margin: 0 0 32px;
-  justify-self: center;
+  margin: 0 auto 28px;
 }
 
 .process-section .audience-tabs button {
@@ -3608,7 +3699,6 @@ footer {
     grid-template-areas:
       "heading"
       "visual"
-      "tabs"
       "content";
     gap: 32px;
   }
@@ -3622,8 +3712,7 @@ footer {
     aspect-ratio: 3 / 2;
   }
 
-  .process-section .solutions-intro,
-  .process-section .audience-tabs {
+  .process-section .solutions-intro {
     margin: 0;
   }
 
@@ -3653,6 +3742,9 @@ footer {
 
 .hero #rotating-phrase {
   display: block;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .hero-panel {
@@ -3664,6 +3756,295 @@ footer {
     grid-template-columns: minmax(0, 1fr) 520px;
     column-gap: clamp(40px, 4vw, 64px);
     padding-inline: max(32px, calc((100vw - 1360px) / 2));
+    align-items: center;
+  }
+
+  .hero-copy {
+    position: relative;
+  }
+
+  /* Centre the two headline rows, not the eyebrow, against the entire panel.
+     On stacked layouts the eyebrow stays in normal flow. */
+  .hero-copy .eyebrow {
+    position: absolute;
+    inset: auto 0 100%;
+  }
+
+  .hero-panel {
+    align-self: center;
+  }
+}
+
+/* Section typography: all five titles share Libre Baskerville Italic.
+   The 90px gap is 2 × the 45px title size; Who We Help keeps its existing gap. */
+:root {
+  --heading-ink: #000e28;
+  --section-title-size: 45px;
+  --section-title-gap: calc(var(--section-title-size) * 2);
+  --section-space: clamp(48px, 5vw, 72px);
+}
+
+:is(#features-title, #work-title, #audience-title, #about-title, #contact-title) {
+  margin: 0;
+  color: var(--heading-ink);
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: var(--section-title-size);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+/* Dark text only: retain blue accents, muted paragraphs and white labels. */
+.hero h1,
+.hero-panel > p,
+.feature-card h3,
+.process-step-title,
+.solution-trigger,
+.process-summary strong,
+.audience-cards h3,
+.team-heading h3,
+.team-designations,
+.site-header .menu,
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
+.site-header nav a.is-active,
+.site-header nav.open a {
+  color: var(--heading-ink);
+}
+
+#services .features-heading {
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: var(--section-title-gap);
+}
+
+#services .feature-grid {
+  margin-top: 0;
+}
+
+.about-section-heading,
+.process-section .solutions-intro {
+  margin-bottom: var(--section-title-gap);
+}
+
+#contact-title + p {
+  margin-top: var(--section-title-gap);
+}
+
+@media (max-width: 900px) {
+  /* Keep the existing 32px image/content gap; together these yield 90px
+     after the title in the stacked process layout. */
+  .process-section .solutions-intro {
+    margin-bottom: calc(var(--section-title-gap) - 32px);
+  }
+}
+
+/* Narrow-to-medium vertical rhythm below the hero. Keep horizontal alignment
+   and card contents intact, reducing the section and card-edge whitespace. */
+.features,
+.process-section,
+.about {
+  padding-block: var(--section-space);
+}
+
+.audience-section {
+  padding-block: clamp(20px, 2.5vw, 36px);
+}
+
+.audience-section > .shell,
+.contact-layout {
+  padding-block: clamp(40px, 4.5vw, 64px);
+}
+
+.contact {
+  padding-block: clamp(8px, 1vw, 16px);
+}
+
+/* Contact details replace the brand logo and share the navigation's top edge. */
+.footer-grid {
+  grid-template-columns: minmax(260px, 1.35fr) minmax(104px, .55fr) minmax(90px, .45fr) 560px;
+  gap: clamp(24px, 2.4vw, 32px);
+  align-items: stretch;
+}
+
+.footer-grid > div {
+  justify-content: flex-start;
+}
+
+.footer-contact {
+  min-width: 0;
+  align-content: space-between;
+  color: var(--heading-ink);
+}
+
+.footer-contact a {
+  overflow-wrap: anywhere;
+}
+
+/* Retain the larger transparent mark, with a small caption underneath.
+   The 32px gap keeps the caption outside the CPA letter-height clear space.
+   At desktop widths, mark + gap + one caption line fit the existing 112px row.
+   Footer artwork fades in below the content, leaving a plain light ground. */
+.footer-practice {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 32px;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--heading-ink);
+}
+
+.footer-cpa-logo {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+}
+
+.footer-cpa-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 306.8899 / 90.4902;
+}
+
+.footer-practice p {
+  align-self: end;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.footer-practice p a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .footer-practice {
+    grid-column: 1 / -1;
+    width: min(560px, calc(100% - 24px));
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 24px;
+  }
+
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-practice {
+    gap: 30px;
+    width: 100%;
+    margin: 0;
+    padding-inline: 20px;
+  }
+
+  .footer-cpa-logo {
+    width: 200px;
+  }
+}
+
+/* Final type-size consistency pass. Preserve the approved hero, credentials,
+   section-title style, small captions and each component's intentional weight. */
+:root {
+  --subheading-size: 22px;
+  --body-text-size: 16px;
+  --action-text-size: 16px;
+  --form-label-size: 14px;
+}
+
+.feature-card h3,
+.audience-cards h3,
+.process-step-title,
+.process-section .solution-trigger,
+.team-heading h3 {
+  font-size: var(--subheading-size);
+  line-height: 1.25;
+}
+
+.hero-panel > p,
+.feature-card p,
+.solution-detail p,
+.process-summary,
+.audience-cards p,
+.contact-intro > p,
+.schedule-call p {
+  font-size: var(--body-text-size);
+}
+
+/* Zoe's longer-form biography remains the requested 17px exception. */
+.team-introduction {
+  font-size: 17px;
+}
+
+/* Equal heading rows align the descriptions even when a title wraps. */
+.audience-cards h3 {
+  min-height: 2.5em;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .audience-cards > li {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    row-gap: 0;
+  }
+}
+
+.hero-panel .button,
+.journey-cta,
+.contact-submit,
+.schedule-call > a {
+  font-size: var(--action-text-size);
+}
+
+.contact-fields label > span {
+  font-size: var(--form-label-size);
+}
+
+@media (min-width: 1051px) {
+  /* Preserve the bio's breathing room and the unchanged, uncropped portrait. */
+  .team-introduction {
+    margin-top: 36px;
+  }
+
+  .team-introduction + .team-introduction {
+    margin-top: 24px;
+  }
+
+  .team-credential-logos {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --subheading-size: 20px;
+  }
+
+  .audience-cards > li {
+    display: block;
+    grid-row: auto;
+  }
+
+  .audience-cards h3 {
+    min-height: 0;
   }
 }
 

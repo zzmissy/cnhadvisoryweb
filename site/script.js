@@ -136,6 +136,7 @@ if (!reducedMotion && "IntersectionObserver" in window) {
 journeyLists.forEach(revealJourneySteps);
 
 function activateJourney(nextTab, moveFocus = false) {
+  const audienceChanged = nextTab.getAttribute("aria-selected") !== "true";
   journeyTabs.forEach((tab) => {
     const selected = tab === nextTab;
     tab.setAttribute("aria-selected", String(selected));
@@ -146,6 +147,9 @@ function activateJourney(nextTab, moveFocus = false) {
     const selected = panel.id === nextTab.getAttribute("aria-controls");
     panel.hidden = !selected;
     if (selected) {
+      if (audienceChanged) {
+        panel.querySelectorAll(".solution-trigger").forEach((trigger) => setSolutionState(trigger, false));
+      }
       panel.classList.remove("is-entering");
       if (!reducedMotion) void panel.offsetWidth;
       panel.classList.add("is-entering");

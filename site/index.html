@@ -66,9 +66,9 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&amp;family=Libre+Baskerville:ital,wght@1,400&amp;display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/glass-hero.webp" type="image/webp" />
-  <link rel="stylesheet" href="styles.css?v=20261030-about-7" />
+  <link rel="stylesheet" href="styles.css?v=20261030-polish-28" />
 </head>
 <body>
   <header class="site-header">
@@ -89,7 +89,7 @@
           <a href="#services">Our Services</a>
           <a href="#how-it-works">How We Work</a>
           <a href="#who-we-help">Who We Help</a>
-          <a href="#about">Our Team</a>
+          <a href="#about">About Us</a>
         </nav>
         <button class="menu" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
       </div>
@@ -110,15 +110,13 @@
         <p>Blue Kite Tax &amp; Advisory Inc. brings wealth, tax and estate planning together in one place. We develop your strategy, manage the details and carry your plan through to implementation, with personal attention and professional expertise at every stage.</p>
         <div class="hero-actions">
           <a class="button" href="https://meetings-na3.hubspot.com/zoe-chu" target="_blank" rel="noopener noreferrer">Book a Consultation <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"></path></svg></a>
-          <a class="button" href="#how-it-works">Our Approach <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"></path></svg></a>
         </div>
       </aside>
     </section>
     <section class="features" id="services" aria-labelledby="features-title">
       <div class="shell">
         <div class="features-heading">
-          <h2 id="features-title"><em>Our Services</em></h2>
-          <p>Wealth, tax and estate planning, from strategy to implementation.</p>
+          <h2 id="features-title">Our Services</h2>
         </div>
         <!-- Icons: Iconoir, Copyright (c) 2021 Luca Burgio. MIT license: assets/iconoir-license.txt -->
         <div class="feature-grid">
@@ -206,27 +204,27 @@
     <section class="solutions process-section" id="how-it-works" aria-labelledby="work-title">
       <div class="shell solutions-layout">
         <header class="solutions-intro">
-          <h2 id="work-title"><em>How We Work</em></h2>
+          <h2 id="work-title">How We Work</h2>
         </header>
-        <div class="audience-tabs" role="tablist" aria-label="Choose your audience">
-          <button id="advisors-tab" role="tab" type="button" aria-selected="true" aria-controls="advisors-panel" tabindex="0">Professional Partners</button>
-          <button id="clients-tab" role="tab" type="button" aria-selected="false" aria-controls="clients-panel" tabindex="-1">Individuals &amp; Families</button>
-        </div>
         <figure class="process-visual">
           <img src="assets/how-we-work-puzzle.png" alt="Hands working together to complete a jigsaw puzzle" width="924" height="615" loading="lazy" decoding="async" />
         </figure>
         <div class="process-content">
+          <div class="audience-tabs" role="tablist" aria-label="Choose your audience">
+            <button id="advisors-tab" role="tab" type="button" aria-selected="true" aria-controls="advisors-panel" tabindex="0">Professional Partners</button>
+            <button id="clients-tab" role="tab" type="button" aria-selected="false" aria-controls="clients-panel" tabindex="-1">Individuals &amp; Families</button>
+          </div>
           <div class="journey-panels">
             <section class="journey-panel is-entering" id="advisors-panel" role="tabpanel" aria-labelledby="advisors-tab">
-              <p class="process-summary"><strong>Your relationship. Our expertise.</strong><br>Extend the planning support you offer your clients. We lead the planning and implementation, with your involvement tailored to the relationship.</p>
+              <p class="process-summary"><strong>Your relationship. Our expertise.</strong></p>
               <ol class="solution-list process-flow" aria-label="Professional partner process">
                 <li class="solution-item">
                   <h3 class="process-step-title">
-                    <button class="solution-trigger" id="advisors-step-1-trigger" type="button" aria-expanded="true" aria-controls="advisors-step-1-panel">
+                    <button class="solution-trigger" id="advisors-step-1-trigger" type="button" aria-expanded="false" aria-controls="advisors-step-1-panel">
                       <span class="solution-index">01</span><span class="solution-title">Introduction</span><i aria-hidden="true">+</i>
                     </button>
                   </h3>
-                  <div class="solution-reveal" id="advisors-step-1-panel" role="region" aria-labelledby="advisors-step-1-trigger" aria-hidden="false">
+                  <div class="solution-reveal" id="advisors-step-1-panel" role="region" aria-labelledby="advisors-step-1-trigger" aria-hidden="true">
                     <div class="solution-reveal-inner"><div class="solution-detail">
                       <p>A simple introduction starts the process. We arrange the initial conversation and establish how you would like to be involved.</p>
                     </div></div>
@@ -285,15 +283,15 @@
             </section>
 
             <section class="journey-panel" id="clients-panel" role="tabpanel" aria-labelledby="clients-tab" hidden>
-              <p class="process-summary"><strong>Personal guidance. Practical action.</strong><br>Work directly with us to bring your wealth, tax and estate priorities into one coordinated plan.</p>
+              <p class="process-summary"><strong>Personal guidance. Practical action.</strong></p>
               <ol class="solution-list process-flow" aria-label="Client process">
                 <li class="solution-item">
                   <h3 class="process-step-title">
-                    <button class="solution-trigger" id="clients-step-1-trigger" type="button" aria-expanded="true" aria-controls="clients-step-1-panel">
+                    <button class="solution-trigger" id="clients-step-1-trigger" type="button" aria-expanded="false" aria-controls="clients-step-1-panel">
                       <span class="solution-index">01</span><span class="solution-title">Discovery</span><i aria-hidden="true">+</i>
                     </button>
                   </h3>
-                  <div class="solution-reveal" id="clients-step-1-panel" role="region" aria-labelledby="clients-step-1-trigger" aria-hidden="false">
+                  <div class="solution-reveal" id="clients-step-1-panel" role="region" aria-labelledby="clients-step-1-trigger" aria-hidden="true">
                     <div class="solution-reveal-inner"><div class="solution-detail">
                       <p>Tell us about your circumstances, priorities and the decisions ahead. We establish where our expertise can make a difference.</p>
                     </div></div>
@@ -358,7 +356,7 @@
     <section class="work-with-us audience-section" id="who-we-help" aria-labelledby="audience-title">
       <div class="shell">
         <header class="work-intro">
-          <h2 id="audience-title"><em>Who We Help</em></h2>
+          <h2 id="audience-title">Who We Help</h2>
         </header>
         <ul class="journey-steps audience-cards">
           <li><span aria-hidden="true">01</span><h3>Professional Partners</h3><p>Accountants, advisors and lawyers seeking planning and implementation support for their clients.</p></li>
@@ -371,18 +369,46 @@
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
+      <header class="shell about-section-heading">
+        <h2 id="about-title">About Us</h2>
+      </header>
       <div class="shell team-layout">
         <div class="team-copy">
           <header class="team-heading">
-            <h2 id="about-title">I’m <em>Zoe</em></h2>
-            <span class="team-designations">CPA, TEP, CFP</span>
+            <h3>Meet Zoe Chu <span class="team-designations">CPA, TEP, CFP<sup>®</sup></span></h3>
           </header>
-          <p class="team-introduction">I founded Blue Kite to make wealth, tax and estate planning clear, personal and practical. I take a direct, collaborative approach, helping you understand how your personal, family and business goals fit together. My tax and wealth planning experience, complemented by insurance licensing in British Columbia, allows me to consider the broader picture. I lead each engagement from research and strategy through to implementation, bringing structure and precision to complex matters. Above all, I take the time to understand the circumstances behind the numbers, with focused advice, transparent scope and thoughtful follow-through.</p>
+          <p class="team-introduction">Zoe founded Blue Kite Tax &amp; Advisory Inc. to make wealth, tax and estate planning clear, personal and practical. She brings over 12 years of experience at Big Four accounting firms and major Canadian banks, and working with leading family offices in Canada, supporting high net worth families and business owners. She has also completed the CPA Canada In-Depth Tax Program.</p>
+          <p class="team-introduction">Her work spans tax and retirement planning, business sales, trusts and estate planning. She considers how assets are held and how personal and business finances fit together, working with clients’ trusted advisors to turn recommendations into practical action. Fluent in English and Mandarin, Zoe brings an understanding of different cultures, family expectations and financial systems to her work.</p>
+          <ul class="team-credential-logos" aria-label="Zoe Chu’s professional credentials">
+            <li>
+              <a href="https://www.bccpa.ca/" aria-label="Chartered Professional Accountant — CPABC">
+                <img class="credential-cpa" src="assets/credential-cpa.webp" width="700" height="314" alt="CPA — Chartered Professional Accountant" loading="lazy" decoding="async" />
+              </a>
+            </li>
+            <li>
+              <a href="https://step.ca/" aria-label="STEP Canada — Zoe Chu’s Trust and Estate Practitioner membership">
+                <img class="credential-step" src="assets/credential-step-canada.png" width="1134" height="412" alt="STEP Canada" loading="lazy" decoding="async" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.fpcanada.ca/" aria-label="Zoe Chu’s CFP certification — FP Canada">
+                <img class="credential-cfp" src="assets/credential-cfp-official.png" width="1066" height="547" alt="CFP® certification mark" loading="lazy" decoding="async" />
+              </a>
+            </li>
+          </ul>
         </div>
 
         <figure class="team-portrait">
           <div class="team-portrait-stage">
-            <img class="team-photo" src="assets/zoe-chu-portrait-2026.jpg?v=20261005-1" alt="Zoe Chu, founder of Blue Kite Tax + Advisory" loading="lazy" decoding="async" />
+            <!-- Retain the original frame pixels and geometry; fit the approved colour photo into its portrait opening. -->
+            <svg class="team-photo" xmlns="http://www.w3.org/2000/svg" viewBox="262 44 791 979" width="791" height="979" role="img" aria-labelledby="zoe-portrait-title">
+              <title id="zoe-portrait-title">Zoe Chu, founder of Blue Kite Tax &amp; Advisory Inc.</title>
+              <defs>
+                <clipPath id="zoe-portrait-opening"><rect x="262" y="61" width="769" height="962" /></clipPath>
+              </defs>
+              <image href="assets/zoe-chu-framed-2026.png?v=20261030-1" width="1293" height="1084" />
+              <image href="assets/zoe-chu-color-2026.png" x="262" y="61" width="769" height="962" preserveAspectRatio="xMidYMid slice" clip-path="url(#zoe-portrait-opening)" />
+            </svg>
           </div>
         </figure>
       </div>
@@ -391,9 +417,8 @@
     <section class="contact shell" id="contact" aria-labelledby="contact-title">
       <div class="contact-layout">
         <div class="contact-intro">
-          <h2 id="contact-title">Think we can help?<br><em>Let’s talk.</em></h2>
+          <h2 id="contact-title">Let’s Talk</h2>
           <p>Tell us a little about what is happening, what you hope to accomplish, and who is already involved. We’ll help you identify the right starting point.</p>
-          <small>No obligation. No lengthy onboarding. Just a clear first conversation.</small>
         </div>
 
         <div class="contact-panel">
@@ -427,7 +452,7 @@
                 <textarea name="message" rows="4" required></textarea>
               </label>
             </div>
-            <button class="contact-submit" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
+            <button class="contact-submit" type="submit">Send Inquiry <span aria-hidden="true">→</span></button>
             <p class="contact-form-status" role="status" aria-live="polite"></p>
           </form>
 
@@ -442,21 +467,26 @@
 
   <footer>
     <div class="shell footer-grid">
-      <div class="footer-identity">
-        <a class="brand footer-brand" href="#top" aria-label="Blue Kite Tax + Advisory home"><img class="footer-logo" src="assets/blue-kite-logo-light.png?v=20260908-1" alt="Blue Kite Tax + Advisory" /></a>
-      </div>
+      <address class="footer-contact">
+        <span>Tel: <a href="tel:+16043608929">604-360-8929</a></span>
+        <span>Email: <a href="mailto:hello@bluekitetax.com">hello@bluekitetax.com</a></span>
+        <span>Serving all across Canada</span>
+      </address>
       <div><b>Explore</b><a href="#services">Our Services</a><a href="#who-we-help">Who We Help</a><a href="#how-it-works">How We Work</a></div>
-      <div><b>Company</b><a href="#about">Our Team</a><a href="#contact">Contact</a></div>
+      <div><b>Company</b><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+      <aside class="footer-practice" aria-label="Blue Kite’s CPA firm registration">
+        <a class="footer-cpa-logo" href="https://www.bccpa.ca/" aria-label="Chartered Professional Accountants of British Columbia">
+          <img src="assets/credential-cpa-transparent.svg" width="307" height="91" alt="CPA — Chartered Professional Accountant" loading="lazy" decoding="async" />
+        </a>
+        <p>Blue Kite Tax &amp; Advisory Inc. is a CPA firm registered with <a href="https://www.bccpa.ca/" title="Chartered Professional Accountants of British Columbia">CPABC</a>.</p>
+      </aside>
     </div>
-    <address class="shell footer-contact">
-      <span>Tel: <a href="tel:+16043608929">604-360-8929</a></span>
-      <span>Email: <a href="mailto:hello@bluekitetax.com">hello@bluekitetax.com</a></span>
-      <span>Serving all across Canada</span>
-    </address>
-    <div class="shell disclaimer">The information on this website is general in nature and is not intended to constitute tax, legal, accounting, investment, or financial advice. Strategies must be evaluated in light of each client's circumstances and applicable legislation.</div>
+    <div class="shell disclaimer">The information on this website is general in nature and is not intended to constitute tax, legal, accounting, investment, or financial advice. Strategies must be evaluated in light of each client's circumstances and applicable legislation.
+      <p class="credential-trademark-notice">CFP® and the CFP® logo are certification trademarks of Financial Planning Standards Board Ltd. (FPSB). FP Canada licenses these marks in Canada. Personal credentials in the About section belong to Zoe Chu.</p>
+    </div>
     <div class="shell legal"><span>© 2026 bluekitetax.com. All rights reserved.</span><span>Privacy · Terms</span></div>
   </footer>
 
-  <script src="script.js?v=20261030-about-7"></script>
+  <script src="script.js?v=20261030-refinements-18"></script>
 </body>
 </html>
