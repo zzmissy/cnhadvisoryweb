@@ -4048,3 +4048,33 @@ footer {
   }
 }
 
+/* Phone-only hierarchy refinements; tablet and desktop remain unchanged. */
+@media (max-width: 620px) {
+  .hero h1 {
+    font-size: clamp(38px, 10.8vw, 48px);
+    line-height: 1.15;
+  }
+
+  .hero h1 .hero-fixed {
+    min-height: 0;
+    white-space: normal;
+  }
+
+  .hero h1 .rotator {
+    /* Reserve two lines so longer rotating phrases do not shift the details. */
+    min-height: 2.6em;
+  }
+
+  .hero-panel > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  #features-title {
+    font-size: calc(var(--section-title-size) * .8);
+  }
+
+  .process-section .solutions-intro {
+    text-align: left;
+  }
+}
